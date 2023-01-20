@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.mphrx.com/api/PatientXSDPojo"
+            xmlns:tns="http://www.mphrx.com/api/PatientXSDPojo"
+            elementFormDefault="qualified">
+
+    <xsd:element name="DemographyRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name = "patientId" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+
+    <xsd:element name="DemographyResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="registrationPhysicalPerson" type="xsd:string"></xsd:element>
+                <xsd:element name="patientName" type="xsd:string"></xsd:element>
+                <xsd:element name="dob" type="xsd:string"></xsd:element>
+                <xsd:element name="nameOfMother" type="xsd:string"></xsd:element>
+                <xsd:element name="gender" type="xsd:string"></xsd:element>
+                <xsd:element name="maritalStatus" type="xsd:string"></xsd:element>
+                <xsd:element name="country" type="xsd:string"></xsd:element>
+                <xsd:element name="cardNumber" type="xsd:string"></xsd:element>
+                <xsd:element name="email" type="xsd:string"></xsd:element>
+                <xsd:element name="patientDemographic" type="tns:demographic"></xsd:element>
+                <xsd:element name="addressType" type="xsd:string"></xsd:element>
+                <xsd:element name="addressCountry" type="xsd:string"></xsd:element>
+                <xsd:element name="streetAddress" type="xsd:string"></xsd:element>
+                <xsd:element name="description" type="xsd:string"></xsd:element>
+                <xsd:element name="neighbourHoodDescription" type="xsd:string"></xsd:element>
+                <xsd:element name="municipleCode" type="xsd:string"></xsd:element>
+                <xsd:element name="fedralUnit" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+
+    <xsd:complexType name="demographic">
+        <xsd:sequence>
+            <xsd:element name="unidentifiablepatientReason" type="xsd:string"></xsd:element>
+            <xsd:element name="schooling" type="xsd:string"></xsd:element>
+            <xsd:element name="profession" type="xsd:string"></xsd:element>
+            <xsd:element name="breed" type="xsd:string"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+
+</xsd:schema>
