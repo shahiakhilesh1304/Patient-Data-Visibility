@@ -36,10 +36,15 @@ public Resource getResource() {
 return resource;
 }
 
+
+
+
 @JsonProperty("resource")
 public void setResource(Resource resource) {
 this.resource = resource;
 }
+
+
 
 @JsonProperty("fullUrl")
 public String getFullUrl() {

@@ -12,7 +12,8 @@ public class ConstantVariables {
     public static final String API_AUTH_TOKEN;
     public static final String API_INFO;
     public static final String API_CONTENT_TYPE;
-
+    public static final String API_TYPE_2;
+    public static final String API_TYPE_3;
 
     static
     {
@@ -22,6 +23,9 @@ public class ConstantVariables {
         API_AUTH_TOKEN = ApiPropertiesConfig.env.getProperty("API_AUTH_TOKEN");
         API_INFO = ApiPropertiesConfig.env.getProperty("API_INFO");
         API_CONTENT_TYPE = ApiPropertiesConfig.env.getProperty("API_CONTENT_TYPE");
+        API_TYPE_2 = ApiPropertiesConfig.env.getProperty("API_TYPE_2");
+        API_TYPE_3 = ApiPropertiesConfig.env.getProperty("API_TYPE_3");
+
     }
 
 }

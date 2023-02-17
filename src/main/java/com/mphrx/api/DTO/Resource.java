@@ -34,6 +34,19 @@ public class Resource {
 	private String birthDate;
 	@JsonProperty("resourceType")
 	private String resourceType;
+	@JsonProperty("maritalStatus")
+	private MaritalStatus maritalStatus;
+
+	
+	@JsonProperty("maritalStatus")
+	public MaritalStatus getMaritalStatus() {
+		return maritalStatus;
+	}
+
+	@JsonProperty("maritalStatus")
+	public void setMaritalStatus(MaritalStatus maritalStatus) {
+		this.maritalStatus = maritalStatus;
+	}
 	
 	@JsonProperty("identifier")
 	public List<Identifier> getIdentifier() {

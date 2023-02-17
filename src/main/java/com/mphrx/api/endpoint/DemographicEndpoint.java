@@ -1,8 +1,9 @@
 package com.mphrx.api.EndPoint;
 
 
-import com.mphrx.api.patientxsdpojo.DemographyRequest;
-import com.mphrx.api.patientxsdpojo.DemographyResponse;
+
+import com.mphrx.api._780.DemographyRequest;
+import com.mphrx.api._780.DemographyResponse;
 import com.mphrx.api.services.PatientDemographicService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +17,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 public class DemographicEndpoint
 {
     public static final Logger log = LoggerFactory.getLogger(DemographicEndpoint.class);
-    private static final String NAMESPACE_URL = "http://www.mphrx.com/api/PatientXSDPojo";
+    private static final String NAMESPACE_URL = "http://www.mphrx.com/api/_780";
     @Autowired
     private PatientDemographicService service;
 
@@ -26,9 +27,12 @@ public class DemographicEndpoint
     {
         DemographyResponse response = new DemographyResponse();
         try{
-        	log.info("Namespace Uri is -> {}",NAMESPACE_URL);
-        	log.info("request received is {}",request.getPatientId());
-            return this.service.getPatientDemoGraphic(request);
+        	//log.info("Namespace Uri is -> {}",NAMESPACE_URL);
+        	log.info("request received");
+        	
+        	response = this.service.getPatientDemoGraphic_With_Identifier(request);
+            return response;
+            
         }catch (Exception e)
         {
             log.info("Exception Occured at Endpoint {}",e);
